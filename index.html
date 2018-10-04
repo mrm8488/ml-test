@@ -1,13 +1,15 @@
-<head><script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.0> </script>
-<script>
-          async function loadModel(){ 
-              model = await tf.loadModel('web_model/model.json') 
-              y = model.predict(tf.zeros([1,2])) 
-              document.getElementById('salida').innerHTML = y.dataSync()[0] 
-          } 
-          loadModel() 
-</script>
-</head> 
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.0"> </script>
+    <script>
+        async function loadModel() {
+            model = await tf.loadModel('web_model/model.json')
+            y = model.predict(tf.zeros([1, 2]))
+            document.getElementById('salida').innerHTML = y.dataSync()[0]
+        }
+        loadModel() 
+    </script>
+</head>
+
 <body>
-        <p id ='salida'></p> 
+    <p id='salida'></p>
 </body>
